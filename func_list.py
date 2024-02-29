@@ -36,7 +36,7 @@ def sum_num(strg):
 
 # эта же функция в коротком виде
 def comparator(n):
-    return sum([int(i) for i in str(n)]), n
+    return sum([int(i) for i in str(n)])
 
 # делаем сортировку, в качестве ключа передаем функцию sum_num
 # распаковываем список, выводим на экран
