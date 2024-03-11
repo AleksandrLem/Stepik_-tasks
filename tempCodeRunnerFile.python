@@ -1,0 +1,3 @@
+
+rgb_invert = map(lambda el: 255-el, [int(i) for i in input('el=').split()])
+print(*rgb_invert)
