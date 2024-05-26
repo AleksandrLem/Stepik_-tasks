@@ -1,3 +1,23 @@
+lst_s = ['Руслан Пирог 1', 'Тимур Карандаш 5', 'Руслан Линейка 2',
+       'Тимур Тетрадь 12', 'Руслан Хлеб 3']
 
-rgb_invert = map(lambda el: 255-el, [int(i) for i in input('el=').split()])
-print(*rgb_invert)
+lst1 = [i.split() for i in lst_s]
+lst2 = [{i[0]: i[1:]} for i in lst1]
+
+print(lst1)
+print()
+print(lst2)
+print()
+
+dct1 = {}
+for dct in lst2:
+    for k, v in dct.items():
+        dct1.setdefault(k, list()).append(v)
+print(dct1)
+print()
+for k, v in sorted(dct1.items()):
+    el = sorted(v)
+    print(f'{k}:')
+    for i in el:
+        print(i[0], i[1])
+    
